@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Oxygen:wght@300;700&display=swap');
+.App{
+  display:flex;
   flex-direction: column;
   align-items: center;
+  padding:0;
+  padding-top:10%;
+  top:0;
+  margin:0;
+  width:100vw;
+  height:100vh;
+  max-height:100vh;
+  background-color: #df917c;
+  gap:1%;
+  font-family: 'Oxygen', sans-serif;
+  overflow:hidden;
+}
+
+.App {
+  background: linear-gradient(270deg, #ffc8a5, #df917c, #d05c39);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 31s ease infinite;
+  -moz-animation: AnimationName 31s ease infinite;
+  animation: AnimationName 31s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+
+h1 input, #session-length input, #break-length input{
+  text-align:center;
+  background-color:transparent;
+  border:none;
+  text-transform:uppercase;
+  letter-spacing:0.01em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+h1 input{
+  font-size:2em;
+  font-weight:700;
+}
+h1 input:hover, h1 input:focus, #session-length input:hover, #break-length input:hover, #session-length input:focus, #break-length input:focus{
+  background-color:white;
+  border-bottom:5px red;
+}
+.control-panel{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  text-align:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap:5%;
 }
 
-.App-link {
-  color: #61dafb;
+.control-panel-subcontainer{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrows-container{
+  display:flex;
+  flex-direction:row;
+  text-align:center;
+  justify-content: center;
+  font-size:3em;
+  width:50%;
+}
+.arrow-label{
+  cursor:pointer;
+}
+#session-length input, #break-length input{
+  font-family: 'Oxygen Mono', monospace;
+  font-size:1em;
+  width:40%;
+  padding:0;
+  margin:0;
+}
+#timer-label{
+  text-transform: uppercase;
+}
+#timer-label{
+  text-align:center;
+}
+#time-left{
+  font-family: 'Oxygen Mono', monospace;
+  text-align:center;
+  width:100%;
+  font-size:5em;
+}
+
+.timer-control-container{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  gap:5%;
+}
+
+.timer-control-label{
+  cursor:pointer;
+}
+
+footer{
+  margin-top:10%;
+  font-size:0.75em;
 }
